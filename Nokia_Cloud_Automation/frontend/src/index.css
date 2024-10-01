@@ -1,0 +1,30 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+input:checked + span {
+    background-color: #3b82f6; /* Tailwind blue-500 */
+}
+
+input:checked + span + span {
+    transform: translateX(1.5rem); /* Slide the toggle button to the right */
+}
+  
+
